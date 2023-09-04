@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: "Dosis", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #455a64;
+  background-color: #7e57c2;
+}
+
+.node {
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px gray;
+  border: 2px solid #4e58bf;
+}
+
+.node.selected {
+  background: #fff;
+}
+
+.node:hover {
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+}
+
+.App .connection .main-path {
+  fill: none;
+  stroke: #383838;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+.output-container,
+.input-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socket {
+  width: 10px;
+  height: 10px;
+}
+
+.output span {
+  visibility: hidden;
+  background-color: #00b8ff;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.output:hover span {
+  visibility: visible;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  box-shadow: none;
+}
+
+.socket.output,
+.socket.input {
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 20px;
+  height: 20px;
+}
+
+.socket.output {
+  bottom: -10px;
+}
+.socket.input {
+  top: -10px;
+}
+
+input {
+  display: block;
+  color: inherit;
+  width: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  background: #8080801f;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #b0bec5;
+}
